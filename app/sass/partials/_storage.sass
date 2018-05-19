@@ -1,0 +1,45 @@
+.storage
+  padding-top: get-vw(100px)
+  background-color: #f8f9fb
+  text-align: center
+  .title
+    padding-top: get-vw(50px)
+    margin-bottom: get-vw(50px)
+    color: #2db86e
+    grid-area: title
+    font-weight: 400
+    text-transform: uppercase
+  svg
+    width: get-vw(250px)
+    margin-top: get-vw(50px)
+  .btn
+    display: inline-block
+    font-size: get-vw(14px)
+    background: #00a8b8
+    width: get-vw(300px)
+    border-radius: 5px
+    padding: 1.23em 0
+    position: relative
+    overflow: hidden
+    margin: 0 30px
+    @extend %relative
+    &--drugstore
+      background: #e4f4f2
+      color: #2db86e
+      position: relative
+      transition: background 0.2s linear
+      &:hover
+        background: #2db86e
+        color: #fff
+    &--instr
+      @extend %relative
+      color: #fff
+      background: linear-gradient(to left, #2db86e, #87c84a)
+
+
+.btn-box
+  padding: get-vw(95px) 0 get-vw(170px) 0
+
+
+
+

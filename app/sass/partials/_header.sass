@@ -1,0 +1,52 @@
+header
+  .container
+    position: relative
+    .header-content
+      position: fixed
+      left: 0
+      z-index: 1000
+      display: flex
+      justify-content: space-around
+      align-items: center
+      width: 100%
+
+  .logo
+    margin-left: get-vw(-175px)
+    @extend %relative
+    a
+      font-family: Arial, sans-serif
+      font-size: get-vw(42px)
+      font-weight: 900
+      color: #fff
+
+  nav
+    a
+      color: #fff
+      font-size: get-vw(18px)
+      font-weight: 500
+      padding: get-vw(10px) get-vw(20px)
+      margin-left: get-vw(15px)
+      border: 1px solid transparent
+      border-radius: get-vw(50px)
+      @extend %transition
+      &:hover
+        color: darkblue
+        border: 1px solid transparent
+        background: #fff
+
+.addBg-js
+    background-color: #763cbf
+
+.fixed
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+
+.menu-slim
+  display: none
+
+
+.mobile-menu
+  .nav-mobile
+    display: none

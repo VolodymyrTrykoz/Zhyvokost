@@ -1,0 +1,47 @@
+.features
+  padding-top: get-vw(50px)
+  overflow: hidden
+  .container
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: auto
+    grid-template-areas: 'left right'
+  &__left
+    grid-area: left
+    justify-self: end
+    img
+      width: 100%
+      height: auto
+    .title
+      font-family: Arial, sans-serif
+      font-size: get-vw(42px)
+      font-weight: 900
+      color: #fff
+      background: #2db86e
+      text-align: center
+      margin: 0 20px 15px auto
+      width: 55%
+      border-radius: 5px
+      box-shadow: 0 4px 10px 1px rgba(184,205,219,0.8)
+  &__right
+    grid-area: right
+    .heading
+      font-size: get-vw(24px)
+      color: #2db86e
+      @extend %relative
+  &__list
+    list-style-type: none
+    margin-top: get-vw(50px)
+    padding: get-vw(20px)
+    border-radius: 5px
+    box-shadow:  0 4px 10px 1px rgba(146,148,151,.2)
+    width: get-vw(300px)
+    li
+      font-size: get-vw(14px)
+      margin: get-vw(20px) 0
+      padding: get-vw(10px) 0 get-vw(10px) get-vw(50px)
+      background-image: url(../img/SVG/check.svg)
+      background-repeat: no-repeat
+      color: #7a818c
+
+

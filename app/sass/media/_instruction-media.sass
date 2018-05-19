@@ -1,0 +1,32 @@
+@media screen and (max-width: 1050px)
+  .instruction
+    &:after
+      border-left: get-vw(1850px) solid #f8f9fb
+    .title
+      font-size: get-vw(50px)
+    .heading
+      font-size: get-vw(40px)
+    span
+      font-size: get-vw(30px)
+    p
+      font-size: get-vw(25px)
+    &__right
+      width: 100%
+
+@media screen and (max-width: 450px)
+  .instruction
+    &-content
+     grid-template-areas: "title title" "right right"
+     text-align: center
+     padding: 0 15px
+    .title
+      font-size: get-vw(130px)
+    .heading
+      font-size: get-vw(100px)
+    span
+      font-size: get-vw(80px)
+    p
+      font-size: get-vw(60px)
+      text-align: left
+    &__right
+      padding-bottom: 0

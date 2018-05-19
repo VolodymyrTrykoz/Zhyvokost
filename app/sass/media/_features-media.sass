@@ -1,0 +1,46 @@
+@media screen and (max-width: 1050px)
+  .features
+    margin-top: get-vw(100px)
+    &__list
+      width: 80%
+      li
+        font-size: get-vw(30px)
+        margin: get-vw(50px) 0
+        padding-left: get-vw(80px)
+    &__left
+      .title
+        width: 70%
+        font-size: get-vw(80px)
+    &__right
+      .heading
+        font-size: get-vw(50px)
+
+
+@media screen and (max-width: 450px)
+  .features
+    .container
+      grid-template-columns: 100%
+      grid-template-rows: 1fr 1fr
+      grid-template-areas: 'title' 'item' 'heading' 'feat-list'
+    &__left
+      grid-area: inherit
+      .title
+       grid-area: title
+       font-size: get-vw(130px)
+       margin: 0 auto
+      .item
+       grid-area: item
+    &__right
+      grid-area: inherit
+      .heading
+        grid-area: heading
+        font-size: get-vw(100px)
+        text-align: center
+      .features__list
+        grid-area: feat-list
+        margin-left: auto
+        margin-right: auto
+        li
+          font-size: get-vw(80px)
+          padding-left: get-vw(180px)
+          margin: 20px 0

@@ -1,0 +1,31 @@
+.advantage
+  background-image: url(../img/img-03.png), linear-gradient(to left, #77c550 , #4e9327)
+  background-repeat: no-repeat, no-repeat
+  background-position: 100% 50%, 100% 50%
+  padding: get-vw(170px) 0
+  -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%)
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%)
+  overflow: hidden
+  .container
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: auto
+    grid-template-areas: 'left right'
+  .title
+    color: #fff
+  p
+    color: #fff
+  &__left
+    grid-area: left
+    position: relative
+    img
+      position: absolute
+      width: get-vw(500px)
+      left: get-vw(-400px)
+      top: 70%
+      transform: translateY(-50%)
+
+  &__right
+    grid-area: right
+  sup
+    cursor: pointer

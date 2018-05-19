@@ -1,0 +1,28 @@
+*
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  &:-webkit-any-link
+    text-decoration: none
+html
+  font-size: 62.5%
+  font-family: $f-regular
+
+body
+  position: relative
+.container
+  max-width: 1400px
+  margin: 0 auto
+  padding: 0 15px
+.title
+  font-size: get-vw(42px)
+  font-weight: 500
+p
+  font-size: get-vw(14px)
+  color: #7a818c
+  line-height: 2
+
+@function get-vw($object)
+  $vw: (1920 * 0.01) * 1px
+  @return ($object / $vw) * 1vw

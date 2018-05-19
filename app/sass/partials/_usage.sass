@@ -1,0 +1,111 @@
+.usage
+  background-color: #7c3fc7
+  position: relative
+  margin-top: 50px
+  &:before
+    content: ''
+    position: absolute
+    height: 50px
+    top: -50px
+    width: 100%
+    background-color: #7c3fc7
+  &:after
+    content: ''
+    position: absolute
+    bottom: get-vw(-50px)
+    left: 0
+    width: 0
+    height: 0
+    border-bottom: get-vw(50px) solid #f8f9fb
+    border-left: get-vw(1890px) solid #7c3fc7
+  .container
+    max-width: 1000px
+    display: grid
+    grid-template-columns: 40% 30% 30%
+    grid-template-rows: auto auto
+    grid-template-areas: "title title title" "left middle right"
+    position: relative
+  .title
+    margin-bottom: get-vw(50px)
+    color: #fff
+    grid-area: title
+    font-weight: 400
+    text-align: center
+    text-transform: uppercase
+    @extend %relative
+    &:before
+      content: ""
+      position: absolute
+      bottom: get-vw(-52px)
+      left: 0
+      width: get-vw(1200px)
+      height: get-vw(2px)
+      background-color: rgba(247,247, 247, 0.3)
+  img
+    width: get-vw(50px)
+  p
+    color: #fff
+    font-weight: 400
+  .heading
+    font-size: get-vw(24px)
+    font-weight: 400
+    color: #fff
+    text-transform: uppercase
+    position: relative
+    margin-bottom: get-vw(45px)
+    &:after
+      content: ""
+      position: absolute
+      left: 0
+      bottom: get-vw(-25px)
+      width: get-vw(65px)
+      height: get-vw(3px)
+      background-color: #fff
+  &__left
+    grid-area: left
+    background-color: #fff
+    padding: get-vw(35px) get-vw(35px) get-vw(50px) get-vw(35px)
+    box-shadow: 0 4px 10px 1px rgba(146,148,151,.2)
+    position: absolute
+    z-index: 50
+    height: get-vw(400px)
+    .heading
+      color: #2c333f
+      &:after
+        background-color: #2db86e
+    a
+      color: #2db86e
+      display: flex
+      align-items: center
+      font-size: get-vw(16px)
+      padding-top: get-vw(50px)
+    img
+      &:last-child
+        padding-left: get-vw(15px)
+        width: get-vw(50px)
+    p
+      color: #7a818c
+  &__middle
+    grid-area: middle
+    padding-top: get-vw(35px)
+    img
+      width: get-vw(45px)
+
+  &__right
+    grid-area: right
+    padding-top: get-vw(35px)
+  .svg-left
+    position: absolute
+    left: get-vw(-500px)
+    top: get-vw(15px)
+    width: get-vw(500px)
+    z-index: 60
+  .svg-right
+    position: absolute
+    right: get-vw(-300px)
+    top: get-vw(15px)
+    width: get-vw(300px)
+    z-index: 60
+
+
+

@@ -1,0 +1,59 @@
+@media screen and (max-width: 1050px)
+  .usage
+    &:after
+      border-left: get-vw(1850px) solid #7c3fc7
+    .title
+      font-size: get-vw(50px)
+      &:before
+        width: get-vw(1600px)
+    .heading
+      font-size: get-vw(40px)
+    img
+      width: get-vw(100px)
+    p
+      font-size: get-vw(26px)
+    &__left
+      padding-right: get-vw(20px)
+
+
+@media screen and (max-width: 450px)
+  .usage
+    .container
+      grid-template-columns: 1fr
+      grid-template-rows: auto auto auto auto
+      grid-template-areas: "title" "left" "middle" "right"
+      text-align: center
+      grid-row-gap: get-vw(50px)
+    img
+      width: get-vw(400px)
+    &__left
+      position: static
+      width: 80%
+      margin: 0 auto
+      img:last-child
+        padding-left: get-vw(50px)
+        width: get-vw(150px)
+      a
+        font-size: get-vw(50px)
+    &__middle
+      position: static
+      width: 80%
+      margin: 0 auto
+    &__right
+      position: static
+      width: 80%
+      margin: 0 auto
+    .title
+      font-size: get-vw(130px)
+    .heading
+      font-size: get-vw(80px)
+      &:after
+        left: 50%
+        transform: translateX(-50%)
+        width: get-vw(100px)
+        height: get-vw(5px)
+        bottom: get-vw(-50px)
+    p
+      font-size: get-vw(60px)
+      margin-top: get-vw(100px)
+

@@ -1,0 +1,25 @@
+.precaution
+  padding: get-vw(40px)  0 get-vw(80px)
+  .container
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: auto
+    grid-template-areas: 'left right'
+  &__left
+    grid-area: left
+    text-align: center
+    padding-top: get-vw(130px)
+    position: relative
+
+    img
+      width: 30%
+      height: auto
+  .img1
+    @extend %relative
+  .img2
+    position: absolute
+    top: 0
+    left: get-vw(470px)
+    width: 32%
+  &__right
+    grid-area: right

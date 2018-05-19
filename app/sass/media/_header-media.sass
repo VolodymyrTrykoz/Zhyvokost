@@ -1,0 +1,78 @@
+@media screen and (max-width: 1050px)
+  header
+    nav
+      a
+        font-size: get-vw(26px)
+
+@media screen and (max-width: 756px)
+  header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
+    .logo
+      margin-left: get-vw(50px)
+      a
+        font-size: get-vw(80px)
+    nav
+      display: none
+    .container
+      .header-content
+        justify-content: space-between
+
+@media screen and (max-width: 450px)
+  header
+    .logo
+      a
+        font-size: get-vw(100px)
+    .container
+      .header-content
+        padding-top: get-vw(15px)
+
+  //Menu burger button
+  .menu-slim
+    display: block
+    background: transparent
+    position: absolute
+    z-index: 555
+    top: 50%
+    transform: translateY(-50%)
+    right: 1rem
+    height: 17px
+    width: 50px
+    cursor: pointer
+    &:before,
+    &:after
+      background: #fff
+      backface-visibility: hidden
+      content: ""
+      height: 3px
+      left: 0
+      transition: 0.75s
+      width: 30px
+
+
+    &:before
+      box-shadow: #fff 0 7px 0 0
+      position: absolute
+      top: 0
+
+
+    &:after
+      position: absolute
+      top: calc(100% - 3px)
+
+
+  .menu-js-toggle
+    &:before
+      box-shadow: transparent 0 0 0 0
+      top: 50%
+      transform: rotate(225deg)
+
+    &:after
+      top: 50%
+      transform: rotate(315deg)
+
+
+

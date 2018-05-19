@@ -1,0 +1,49 @@
+.instruction
+  background: linear-gradient(178deg, #fff 20%,#f8f9fb 20%)
+  padding-bottom: get-vw(75px)
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    z-index: 5
+    bottom: get-vw(-50px)
+    left: 0
+    width: 0
+    height: 0
+    border-bottom: get-vw(50px) solid #7c3fc7
+    border-left: get-vw(1890px) solid #f8f9fb
+  .container
+    background: #fff
+    padding: 0
+  &-content
+    display: grid
+    grid-template-columns: 50% 50%
+    grid-template-rows: auto auto
+    grid-template-areas: "title title" "left right"
+    border-radius: 5px
+    box-shadow:  0 4px 10px 1px rgba(146,148,151,.2)
+    @extend %relative
+  .title
+    grid-area: title
+    text-align: center
+    color: #2db86e
+    font-size: get-vw(36px)
+    font-weight: 400
+    text-transform: uppercase
+  .heading
+    font-size: get-vw(20px)
+    color: #2c333f
+    text-transform: uppercase
+  span
+    font-size: get-vw(18px)
+    color: #2c333f
+  &__left
+    grid-area: left
+    padding-top: 50px
+    img
+      width: 100%
+      height: auto
+  &__right
+    grid-area: right
+    padding-bottom: 50px
+    width: 57%
